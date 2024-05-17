@@ -79,10 +79,10 @@ public class OrderDetailFragment  extends Fragment {
         @Override
         protected void convert(@NonNull BaseViewHolder baseViewHolder, OrderDetailInfoBean.OrderListBean bean) {
                 if(bean.getAppointment_time()!=null&&!bean.getAppointment_time().isEmpty()){
-                    baseViewHolder.setText(R.id.tv_order_detail_photo,"预约单").setText(R.id.tv_other_info,bean.getAppointment_time()).setVisible(R.id.tv_other_info,true);
+                    baseViewHolder.setText(R.id.tv_order_detail_photo,"预约单").setText(R.id.tv_other_info,"预约时间:"+bean.getAppointment_time()).setVisible(R.id.tv_other_info,true);
 
                 }else if(bean.getTakeout_address()!=null&&!bean.getTakeout_address().isEmpty()){
-                    baseViewHolder.setText(R.id.tv_order_detail_photo,"外卖单").setText(R.id.tv_other_info,bean.getTakeout_address()).setVisible(R.id.tv_other_info,true);;
+                    baseViewHolder.setText(R.id.tv_order_detail_photo,"外卖单").setText(R.id.tv_other_info,"外卖地址:"+bean.getTakeout_address()).setVisible(R.id.tv_other_info,true);;
                 }else{
                     baseViewHolder.setText(R.id.tv_order_detail_photo,"堂食订单").setText(R.id.tv_other_info,"桌号："+bean.getTable_number()).setVisible(R.id.tv_other_info,true);
                 }
