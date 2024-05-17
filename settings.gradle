@@ -1,0 +1,30 @@
+pluginManagement {
+    repositories {
+        maven {
+            url 'https://dns.lastcoffee.top:9082/repository/chinaGroup/'
+        }
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+        }
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        maven {
+            url 'https://dns.lastcoffee.top:9082/repository/chinaGroup/'
+        }
+        maven { url 'https://jitpack.io' }
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "buyMall"
+include ':app'

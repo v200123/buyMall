@@ -1,0 +1,63 @@
+plugins {
+    alias(libs.plugins.androidApplication)
+}
+
+android {
+    namespace 'com.example.buymall'
+    compileSdk 34
+    sourceSets{
+        main{
+            jniLibs.srcDirs=['libs']
+        }
+    }
+    defaultConfig {
+        applicationId "com.example.buymall"
+        minSdk 24
+        targetSdk 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    lint {
+        baseline = file("lint-baseline.xml")
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        doNotStrip "*/*/libvad.dnn.so"
+        doNotStrip "*/*/libbd_easr_s1_merge_normal_20151216.dat.so"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'com.geyifeng.immersionbar:immersionbar:3.2.2'
+    implementation libs.appcompat
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+    implementation 'com.github.getActivity:Toaster:12.6'
+    implementation 'com.github.getActivity:ShapeView:9.0'
+        implementation "io.github.cymchad:BaseRecyclerViewAdapterHelper:3.0.14"
+    implementation 'com.github.angcyo:QrCodeZxingZbar:1.0.2'
+    implementation 'com.contrarywind:Android-PickerView:4.1.9'
+    implementation 'com.squareup.retrofit2:retrofit:2.11.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.11.0'
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
+    implementation 'com.github.li-xiaojun:XPopup:2.10.0'
+    api 'com.alipay.sdk:alipaysdk-android:15.8.17@aar'
+
+}

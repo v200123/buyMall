@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+   xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorLightWhite"
+  >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:transitionName="searchFood"
+            app:cardBackgroundColor="@color/colorAddLightWhite"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="15dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/icon_search"/>
+
+                <EditText
+                    android:id="@+id/search_edit_text"
+                    android:layout_width="0px"
+                    android:layout_weight="8"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:singleLine="true"
+                    android:background="@null"
+                    android:hint="搜一搜，饥不了"
+                    android:imeOptions="actionSearch"
+                    android:maxLines="1"
+                    android:textSize="13sp"/>
+                <ImageView
+                    android:id="@+id/iv_yuyinshibie"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/vioce"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+<!--        <TextView-->
+<!--            android:id="@+id/search_cancel"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:padding="10dp"-->
+<!--            android:text="取消"-->
+<!--            android:textColor="@color/colorFontInWhite"-->
+<!--            android:textSize="14sp"/>-->
+    </LinearLayout>
+
+<!--
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:src="@drawable/icon_search"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="暂无查询结果"
+                android:textColor="@color/colorGrey"
+                android:textSize="13sp" />
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+-->
+    <FrameLayout
+        android:paddingEnd="20dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_change_style"
+            android:text="切换布局"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <com.hjq.shape.layout.ShapeLinearLayout
+            android:orientation="horizontal"
+            android:layout_gravity="end"
+            app:shape_radius="15dp"
+           app:shape_solidColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            
+           <com.hjq.shape.view.ShapeTextView
+               android:id="@+id/tv_ts"
+               android:text="堂食"
+               app:shape_radius="15dp"
+               app:shape_solidColor="@color/white"
+               android:textColor="@color/black"
+               android:paddingStart="8dp"
+               app:shape_textSelectedColor="@color/white"
+               app:shape_solidSelectedColor="@color/colorClearBlue"
+               android:paddingEnd="8dp"
+               android:paddingTop="6dp"
+               android:paddingBottom="6dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+            <com.hjq.shape.view.ShapeTextView
+                android:id="@+id/tv_wm"
+
+                android:text="外卖"
+                app:shape_radius="15dp"
+                app:shape_solidColor="@color/white"
+                android:textColor="@color/black"
+                android:paddingStart="8dp"
+                app:shape_textSelectedColor="@color/white"
+                app:shape_solidSelectedColor="@color/colorClearBlue"
+                android:paddingEnd="8dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <com.hjq.shape.view.ShapeTextView
+                android:id="@+id/tv_yy"
+
+                android:text="预约"
+                app:shape_radius="15dp"
+                app:shape_solidColor="@color/white"
+                android:textColor="@color/black"
+                android:paddingStart="8dp"
+                app:shape_textSelectedColor="@color/white"
+                app:shape_solidSelectedColor="@color/colorClearBlue"
+                android:paddingEnd="8dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </com.hjq.shape.layout.ShapeLinearLayout>
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                app:cardCornerRadius="5dp"
+                app:cardElevation="0dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_ripple"
+                        android:ellipsize="end">
+                        <TextView
+                            android:id="@+id/category_homely"
+                            android:ellipsize="end"
+                            android:background="@color/colorLightWhite"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="家常"
+                            />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/category_out_pot"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_ripple"
+                        android:ellipsize="end">
+                        <TextView
+                            android:id="@+id/category_pot"
+                            android:background="@color/colorLightWhite"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:gravity="center"
+                            android:text="火锅"
+                            />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/category_snack"
+                        android:background="@color/colorLightWhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="小吃"
+                        />
+                    <TextView
+                        android:id="@+id/category_drink"
+                        android:background="@color/colorLightWhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="酒水"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="0dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorBgWhite">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:paddingStart="8dp"
+                    android:background="@color/colorLightWhite"
+                    android:id="@+id/menu_lists"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="60dp"
+                    />
+
+                    <!--<GridView
+                        android:id="@+id/menu_type_goods"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:numColumns="3"/>-->
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+    <com.hjq.shape.layout.ShapeConstraintLayout
+        android:id="@+id/bind_number"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="220dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="-30dp"
+            android:background="@color/black"
+            android:gravity="center"
+
+            android:text="暂未绑定桌号"
+            android:textColor="@color/colorGrey"
+            app:layout_constraintBottom_toBottomOf="@+id/shapeImageView"
+            app:layout_constraintStart_toEndOf="@+id/shapeImageView" />
+
+        <com.hjq.shape.view.ShapeImageView
+            android:layout_marginStart="25dp"
+
+            android:id="@+id/shapeImageView"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:src="@drawable/shop_cart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shape_radius="30dp"
+            app:shape_solidColor="@color/black" />
+
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/tv_shop_number"
+            app:shape_solidColor="@color/colorLightRed"
+            android:text="0"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:layout_marginStart="-20dp"
+            app:shape_radius="20dp"
+            android:gravity="center"
+            android:textSize="8dp"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            app:layout_constraintStart_toEndOf="@+id/shapeImageView"
+            app:layout_constraintTop_toTopOf="parent" />
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/tv_pay"
+            android:text="去支付"
+            android:gravity="center"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            app:shape_radiusInTopRight="30dp"
+            app:shape_radiusInBottomRight="30dp"
+            android:textColor="@color/white"
+            app:shape_solidDisabledColor="@color/colorBgLightBlack"
+            android:enabled="false"
+            app:shape_solidColor="@color/colorBgOrange"
+            android:layout_width="wrap_content"
+            android:layout_height="0px"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/textView" />
+
+
+    </com.hjq.shape.layout.ShapeConstraintLayout>
+</FrameLayout>

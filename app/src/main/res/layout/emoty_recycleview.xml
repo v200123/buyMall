@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hjq.shape.layout.ShapeLinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    app:shape_solidColor="@color/colorBgLightBlack"
+    app:shape_radiusInTopLeft="4dp"
+    app:shape_radiusInTopRight="4dp"
+
+    android:layout_height="300dp">
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="12dp"
+        android:background="@color/colorGrey"
+        android:id="@+id/rv_empty"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/>
+</com.hjq.shape.layout.ShapeLinearLayout>
